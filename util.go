@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
     "embed"
@@ -10,7 +10,7 @@ var zipFile embed.FS // 声明一个嵌入的文件系统变量
 
 func main() {
     // 现在你可以直接读取 zipFile 这个变量，它包含了 data.zip 的内容
-    data, err := zipFile.ReadFile("data.zip")
+    data, err := zipFile.ReadFile("remote-verify.zip")
     if err != nil {
         log.Fatal(err)
     }
